@@ -12,15 +12,30 @@ $students = [
 
     ['name' => 'Rahma', 'email' => 'hany@test.com', 'status' => 'AAST'],
            ];
+        //    foreach($students as $row) 
+        //    {
+        //     if($row['status']=='Science') 
+        //     { echo '<style type="text/css"> {color:red;} </style>';}
+        //     }
 
+            foreach($students as $row) {
+                if($row['status']=='Science'){
+                    echo "<tr  class= science style='color:red' >";
+                }else{
+            echo "<tr>";
+                }}
 
 ?>
  <html>
 <head lang="en">
+        <link rel="stylesheet" href="lab3.css">
         <meta charset="UTF-8"/>
         <title> PHP class  </title>
         <meta name="description" content="Application"/>
- </head> 
+        <style>
+        .science{color:red};
+        </style>
+ </head>  
     <body>
      <table width="20%" >
         <thead>
@@ -31,7 +46,7 @@ $students = [
                 <th>Status</th>
             </tr> 
           
-            <tr>
+            <tr class ="science">
                 <td> <?php echo $students[0]['name']; ?> </td>
                 <td> <?php echo $students[0]['email']; ?> </td>
                 <td style="color:red;" > <?php echo $students[0]['status']; ?> </td>
@@ -49,7 +64,7 @@ $students = [
                 <td> <?php echo $students[2]['status']; ?> </td>
             </tr>
 
-            <tr>
+            <tr class ="science">
                 <td> <?php echo $students[3]['name']; ?> </td>
                 <td> <?php echo $students[3]['email']; ?> </td>
                 <td style="color:red;" > <?php echo $students[3]['status']; ?> </td>
