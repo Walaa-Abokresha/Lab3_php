@@ -17,7 +17,6 @@ $students = [
 ?>
  <html>
 <head lang="en">
-        <link rel="stylesheet" href="lab3.css">
         <meta charset="UTF-8"/>
         <title> PHP class  </title>
         <meta name="description" content="Application"/>
@@ -62,6 +61,6 @@ $students = [
                 <td> <?php echo $students[4]['status']; ?> </td>
             </tr>
      </table>
-   </div>
+
 </body>
 <html> 
