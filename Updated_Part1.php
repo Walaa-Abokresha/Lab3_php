@@ -164,7 +164,7 @@ if (empty($_POST["gender"])) {
                                 <option value="PHP">PHP</option>
                                 <option value="HTML">HTML</option>
                                 <option value="JavaScript">JavaScript</option>
-                                <option value="MYSQL">EnglanMYSQLd</option>
+                                <option value="MYSQL">MYSQL</option>
                             </select>
                         </td>
                     </tr>
