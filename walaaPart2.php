@@ -1,81 +1,38 @@
 <?php
 
+$students = [ 
+    ['name' => 'Alaa', 'email' => 'ahmed@test.com', 'status' => 'Science'], 
+    ['name' => 'Shamy', 'email' => 'ali@test.com', 'status' => 'AAST'], 
+    ['name' => 'Youssef', 'email' => 'basem@test.com', 'status' => 'AAST'], 
+    ['name' => 'Waleid', 'email' => 'farouk@test.com', 'status' => 'Science'], 
+    ['name' => 'Rahma', 'email' => 'hany@test.com', 'status' => 'AAST'], 
+];
 
-$students = [
-    ['name' => 'Alaa','email' => 'ahmed@test.com','status' => 'Science'],
+echo '<table width="50%;" border="1px;">';
 
-    ['name' => 'Shamy','email' => 'ali@test.com', 'status' => 'AAST'],
+    echo '<h2 style="color: green;" >' .'Application name: PHP class registration' .'</h2>';
+    echo '<tr>';
+        echo '<th>'. 'Name' .'</th>';
+        echo '<th>' .'E-mail'. '</th>';
+        echo '<th>'. 'Status' .'</th>';
+    echo '</tr>'; 
 
-    ['name' => 'Youssef', 'email' => 'basem@test.com','status' => 'AAST'],
+  
 
-    ['name' => 'Waleid', 'email' => 'farouk@test.com', 'status' => 'Science'],
+        foreach($students as $row=>$value){
+            echo '<tr>';
 
-    ['name' => 'Rahma', 'email' => 'hany@test.com', 'status' => 'AAST'],
-           ];
-        //    foreach($students as $row) 
-        //    {
-        //     if($row['status']=='Science') 
-        //     { echo '<style type="text/css"> {color:red;} </style>';}
-        //     }
-
-            foreach($students as $row) {
-                if($row['status']=='Science'){
-                    echo "<tr  class= science style='color:red' >";
+            foreach($value as $row2 => $value2){
+                if( $value2 == "Science" ) {
+               echo '<td>'.'<span style="color: red;" >' .$value2. '</span>'.'</td>';
                 }else{
-            echo "<tr>";
-                }}
 
-?>
- <html>
-<head lang="en">
-        <link rel="stylesheet" href="lab3.css">
-        <meta charset="UTF-8"/>
-        <title> PHP class  </title>
-        <meta name="description" content="Application"/>
-        <style>
-        .science{color:red};
-        </style>
- </head>  
-    <body>
-     <table width="20%" >
-        <thead>
-            <h2 style="color: black;" > Application name: PHP class registration </h2>
-            <tr>
-                <th>Name</th>
-                <th>E-mail</th>
-                <th>Status</th>
-            </tr> 
-          
-            <tr class ="science">
-                <td> <?php echo $students[0]['name']; ?> </td>
-                <td> <?php echo $students[0]['email']; ?> </td>
-                <td style="color:red;" > <?php echo $students[0]['status']; ?> </td>
-            </tr>
-         
-            <tr>
-                <td> <?php echo $students[1]['name']; ?> </td>
-                <td> <?php echo $students[1]['email']; ?> </td>
-                <td> <?php echo $students[1]['status']; ?> </td>
-            </tr>
+                echo '<td>' .$value2. '</td>';
+            }
+        }
+        echo '</tr>';
+    }
 
-            <tr>
-                <td> <?php echo $students[2]['name']; ?> </td>
-                <td> <?php echo $students[2]['email']; ?> </td>
-                <td> <?php echo $students[2]['status']; ?> </td>
-            </tr>
+    echo '</table>';
 
-            <tr class ="science">
-                <td> <?php echo $students[3]['name']; ?> </td>
-                <td> <?php echo $students[3]['email']; ?> </td>
-                <td style="color:red;" > <?php echo $students[3]['status']; ?> </td>
-            </tr>
-
-            <tr>
-                <td> <?php echo $students[4]['name']; ?> </td>
-                <td> <?php echo $students[4]['email']; ?> </td>
-                <td> <?php echo $students[4]['status']; ?> </td>
-            </tr>
-     </table>
-
-</body>
-<html> 
+    ?>
